@@ -84,6 +84,24 @@
         color: #4b5563;
         font-size: 0.9rem;
       }
+
+      .accordion-btn i {
+        transition: transform 0.2s ease;
+      }
+
+      .rotate-180 {
+        transform: rotate(180deg);
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+
+      .accordion-content.open {
+        max-height: 1000px; /* lo suficiente para cualquier texto */
+      }
     </style>
   </head>
 
@@ -179,7 +197,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-2"><strong>Concepto formal o descriptivo de Constitución</strong></p>
               <p>
                 La Constitución es la norma fundante del ordenamiento jurídico, aquella que determina cómo se crean las demás normas. Establece quién
@@ -214,7 +232,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p>
                 La Constitución no solo describe instituciones: establece un deber ser. Su contenido sustantivo impone límites estrictos al poder,
                 define espacios de libertad y fija las reglas que estructuran la relación entre gobernantes y gobernados.
@@ -234,7 +252,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-2"><strong>Derecho Constitucional Formal</strong></p>
               <p>
                 Es la Constitución escrita: sistemática, codificada y con fuerza jurídica obligatoria. Su fuente es el poder constituyente originario.
@@ -265,7 +283,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-2"><strong>Plano descriptivo</strong></p>
               <p>Estudia el funcionamiento real del poder: prácticas políticas, instituciones, relaciones sociales y comportamientos efectivos.</p>
 
@@ -284,7 +302,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-2"><strong>Relación con la Ciencia Política</strong></p>
               <p>
                 La Ciencia Política estudia el poder político; el Derecho Constitucional lo organiza y limita. Por ello existe una relación de
@@ -313,7 +331,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-3">
                 La teoría constitucional tiene raíces en la filosofía política clásica. Ya en la <strong>polis griega</strong>
                 se discutían conceptos como autoridad, legitimidad, libertad y participación. Obras como las de
@@ -358,7 +376,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-3">
                 El constitucionalismo no es solo una técnica jurídica: es una <strong>ideología política</strong>
                 que promueve la limitación del poder y la protección de la libertad individual. Surge como reacción frente al absolutismo monárquico.
@@ -402,7 +420,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El <strong>poder constituyente</strong> es la facultad soberana de una comunidad política para darse una Constitución. Representa el
                 origen de todo el orden jurídico y político.
@@ -427,7 +445,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 Es el poder encargado de crear por primera vez una Constitución o de reemplazarla totalmente. Se caracteriza por ser:
               </p>
@@ -452,7 +470,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-3">
                 Es el poder encargado de modificar la Constitución existente. A diferencia del originario, <strong>sí está limitado</strong> por la
                 propia Constitución.
@@ -479,7 +497,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-3">
                 Aunque la reforma constitucional es amplia, la doctrina reconoce que existen
                 <strong>límites materiales</strong> (contenido) y <strong>límites procedimentales</strong> (forma).
@@ -513,7 +531,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-3">
                 La Argentina tuvo varias reformas, parciales y totales, a lo largo de su historia. Cada una respondió a contextos políticos y
                 necesidades institucionales distintas.
@@ -551,7 +569,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El <strong>Estado</strong> es una organización política-jurídica soberana, integrada por una población asentada permanentemente en un
                 territorio, sometida a un conjunto de normas que regulan la convivencia y organizada bajo un poder institucionalizado.
@@ -571,7 +589,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <ul class="list-disc ml-6 space-y-3">
                 <li>
                   <strong>Población</strong>: conjunto de personas que se vinculan de forma estable al Estado mediante un lazo jurídico-político.
@@ -600,7 +618,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-3">
                 La población está integrada por <strong>habitantes</strong> y <strong>ciudadanos</strong>. Los habitantes comprenden tanto nacionales
                 como extranjeros.
@@ -625,7 +643,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">El territorio es el espacio geográfico sobre el cual el Estado ejerce su poder. Comprende:</p>
 
               <ul class="list-disc ml-6">
@@ -650,7 +668,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-3">
                 El gobierno es la manifestación del poder estatal. Organiza y dirige la vida política del Estado. En el constitucionalismo moderno, la
                 noción central es la <strong>división de poderes</strong>, que busca evitar la concentración del poder.
@@ -673,7 +691,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4"><strong>Formas de Estado:</strong></p>
               <ul class="list-disc ml-6 mb-4">
                 <li><strong>Estado unitario</strong>: poder centralizado, una sola soberanía.</li>
@@ -704,7 +722,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 La Constitución es la norma jurídica suprema del ordenamiento argentino. Su función central es organizar el poder, establecer límites
                 y garantizar derechos. Proporciona estabilidad institucional y continuidad jurídica.
@@ -728,7 +746,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p>Tradicionalmente, la Constitución se divide en dos grandes secciones:</p>
 
               <ul class="list-disc ml-6 mt-3">
@@ -747,7 +765,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">El Preámbulo establece los valores y objetivos del orden constitucional argentino. Entre ellos:</p>
 
               <ul class="list-disc ml-6">
@@ -772,7 +790,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">Esta sección reconoce y protege los derechos fundamentales de las personas. Incluye:</p>
 
               <ul class="list-disc ml-6 space-y-2">
@@ -796,7 +814,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p>Regula la estructura institucional del Estado argentino:</p>
 
               <ul class="list-disc ml-6 mt-3">
@@ -818,7 +836,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 La Constitución es la norma suprema del orden jurídico argentino (art. 31). Toda ley, acto o autoridad debe subordinarse a ella.
               </p>
@@ -849,7 +867,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El Poder Legislativo es el órgano representativo por excelencia del sistema republicano. Su función primordial es la creación de
                 leyes, pero también constituye un espacio institucional de debate público, control político y expresión de la soberanía popular.
@@ -873,7 +891,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <h3 class="text-lg font-semibold text-purple-900 mb-2">Cámara de Diputados</h3>
 
               <ul class="list-disc ml-6 space-y-2 mb-4">
@@ -903,7 +921,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">El artículo 75 enumera las atribuciones más importantes del Congreso:</p>
 
               <ul class="list-disc ml-6 space-y-2">
@@ -929,7 +947,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">El procedimiento legislativo argentino incluye varias etapas formales establecidas por la Constitución:</p>
 
               <ul class="list-disc ml-6 space-y-2">
@@ -951,7 +969,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">Además de legislar, el Congreso ejerce un importante rol de <strong>control político</strong> y fiscalización:</p>
 
               <ul class="list-disc ml-6 space-y-2 mb-4">
@@ -979,7 +997,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El Poder Ejecutivo argentino adopta la forma de un <strong>órgano unipersonal</strong>, cuyo titular es el Presidente de la Nación.
                 Esta configuración sigue el modelo presidencialista clásico, diferenciándose del parlamentarismo.
@@ -1004,7 +1022,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">El Presidente es simultáneamente:</p>
 
               <ul class="list-disc ml-6 space-y-2 mb-4">
@@ -1029,7 +1047,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <h3 class="font-semibold text-purple-900 mb-2">Requisitos para ser Presidente (art. 89)</h3>
 
               <ul class="list-disc ml-6 space-y-2 mb-4">
@@ -1062,7 +1080,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">El artículo 99 enumera las facultades presidenciales. Entre las más relevantes:</p>
 
               <ul class="list-disc ml-6 space-y-2 mb-4">
@@ -1092,7 +1110,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 La reforma constitucional de 1994 creó la figura del
                 <strong>Jefe de Gabinete de Ministros</strong>, con el fin de moderar el presidencialismo y fortalecer la responsabilidad política del
@@ -1125,7 +1143,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <h3 class="font-semibold text-purple-900 mb-2">Funciones políticas</h3>
               <ul class="list-disc ml-6 space-y-2 mb-4">
                 <li>Dirección de la política nacional.</li>
@@ -1162,7 +1180,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El <strong>Ministerio Público</strong>, incorporado a nivel constitucional en la reforma de 1994 (arts. 120 y ss.), es un órgano
                 independiente con autonomía funcional y autarquía financiera.
@@ -1197,7 +1215,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">El Ministerio Público se compone de dos estructuras principales:</p>
 
               <ul class="list-disc ml-6 space-y-2 mb-4">
@@ -1224,7 +1242,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 La <strong>Auditoría General de la Nación</strong> (AGN), prevista en el art. 85, es el órgano de control externo del sector público
                 nacional.
@@ -1253,7 +1271,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 La <strong>SIGEN</strong> actúa como el órgano rector del sistema de control interno dentro de la Administración Pública Nacional.
               </p>
@@ -1278,7 +1296,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El <strong>Defensor del Pueblo</strong> es un órgano independiente creado para la defensa de los derechos humanos, los derechos
                 colectivos y los intereses difusos.
@@ -1306,7 +1324,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El sistema de control constitucional argentino combina mecanismos internos y externos que aseguran la transparencia y la
                 responsabilidad de los funcionarios públicos.
@@ -1345,7 +1363,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El <strong>Poder Judicial</strong>, previsto en los arts. 108 a 120, constituye uno de los pilares del sistema republicano. Su función
                 esencial es resolver conflictos, garantizar derechos y ejercer el control de constitucionalidad.
@@ -1373,7 +1391,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">El Poder Judicial federal se compone de:</p>
 
               <ul class="list-disc ml-6 mb-4 space-y-2">
@@ -1399,7 +1417,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El <strong>Consejo de la Magistratura</strong> interviene en la <strong>selección de jueces</strong> y en la
                 <strong>administración del Poder Judicial</strong>.
@@ -1426,7 +1444,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El <strong>Jurado de Enjuiciamiento</strong> tiene a su cargo la remoción de jueces por mal desempeño, delito en el ejercicio de sus
                 funciones o crímenes comunes.
@@ -1445,7 +1463,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">La <strong>Corte Suprema</strong> es el último intérprete de la Constitución y tribunal máximo del país.</p>
 
               <h3 class="font-semibold text-purple-900 mb-2">Competencias principales:</h3>
@@ -1469,7 +1487,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El <strong>control de constitucionalidad</strong> es la facultad judicial de declarar la invalidez de normas o actos contrarios a la
                 Constitución.
@@ -1508,7 +1526,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 La reforma constitucional de 1994 dio jerarquía constitucional a la existencia de los
                 <strong>partidos políticos</strong>, al reconocerlos como instituciones fundamentales del sistema democrático (art. 38).
@@ -1538,7 +1556,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 Los partidos cumplen un rol esencial en la formación de la voluntad política del pueblo. Articulan intereses, reclutan liderazgos y
                 estructuran la competencia electoral.
@@ -1573,7 +1591,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">El sistema electoral argentino se apoya en principios constitucionales:</p>
 
               <ul class="list-disc ml-6 space-y-2 mb-4">
@@ -1599,7 +1617,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">La organización electoral combina elementos de ambos modelos:</p>
 
               <h3 class="font-semibold text-purple-900 mb-2">Sistema Proporcional:</h3>
@@ -1627,7 +1645,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">La administración y control del proceso electoral recae en:</p>
 
               <ul class="list-disc ml-6 mb-4 space-y-2">
@@ -1647,7 +1665,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 La evolución del sistema electoral argentino ha incorporado reformas orientadas a fortalecer la legitimidad democrática.
               </p>
@@ -1679,7 +1697,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 El <strong>poder constituyente</strong> es la facultad originaria del pueblo para darse una Constitución. Es superior, ilimitado y
                 previo al orden jurídico.
@@ -1707,7 +1725,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">La Constitución argentina establece un mecanismo formal para su reforma:</p>
 
               <h3 class="font-semibold text-purple-900 mb-2">1. Declaración de necesidad de reforma</h3>
@@ -1739,7 +1757,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <h3 class="font-semibold text-purple-900 mb-3">Límites formales:</h3>
 
               <ul class="list-disc ml-6 mb-4 space-y-2">
@@ -1771,7 +1789,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 Es el órgano encargado de realizar efectivamente la reforma constitucional. Su autoridad surge del mandato popular y su competencia
                 está limitada por la ley del Congreso.
@@ -1800,7 +1818,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">
                 La enmienda es un mecanismo más simple que la reforma total, utilizado para introducir cambios puntuales o ajustes técnicos.
               </p>
@@ -1827,7 +1845,7 @@
               <i class="fa-solid fa-chevron-down text-purple-700"></i>
             </button>
 
-            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+            <div class="accordion-content mt-4 text-gray-700 leading-relaxed">
               <p class="mb-4">Una reforma válida adquiere plena vigencia desde su aprobación por la Convención y publicación oficial.</p>
 
               <h3 class="font-semibold text-purple-900 mb-2">Efectos principales:</h3>
@@ -1879,12 +1897,31 @@
             <!-- RESULTADOS -->
             <div id="resultadosPDF" class="space-y-4 max-h-[450px] overflow-y-auto pr-3"></div>
 
-            <div id="visorPDF" class="mt-6 hidden">
-  <h3 class="text-lg font-semibold text-purple-700 mb-3">
-    Página seleccionada
-  </h3>
-  <canvas id="pdfCanvas" class="border rounded shadow"></canvas>
-</div>
+            <!-- ================================ -->
+            <!-- VISOR PROFESIONAL DE PDF         -->
+            <!-- ================================ -->
+
+            <div id="visorPDF" class="mt-8 hidden bg-white p-6">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold text-purple-700">Página seleccionada: <span id="pdfPageNumber">—</span></h3>
+
+                <div class="flex gap-3">
+                  <button onclick="zoomOut()" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">-</button>
+
+                  <button onclick="zoomIn()" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">+</button>
+
+                  <button onclick="prevPage()" class="px-3 py-1 bg-purple-600 text-white rounded hover:bg-purple-700">⬅ Anterior</button>
+
+                  <button onclick="nextPage()" class="px-3 py-1 bg-purple-600 text-white rounded hover:bg-purple-700">Siguiente ➡</button>
+
+                  <button onclick="window.open(pdfURL, '_blank')" class="bg-yellow-400 text-black px-3 py-1 rounded hover:bg-yellow-500">
+                    Abrir PDF Completo
+                  </button>
+                </div>
+              </div>
+
+              <canvas id="pdfCanvas" class="border rounded shadow mx-auto"></canvas>
+            </div>
           </div>
 
           <!-- PDF.js -->
@@ -1895,90 +1932,156 @@
           </script>
 
           <script>
-            const pdfURL = "constitucional.pdf"; // 📌 Tu PDF en la raíz del proyecto
+            const pdfURL = "constitucional.pdf";
 
+            let pdfDoc = null;
+            let currentPage = 1;
+            let currentScale = 1.3;
+            let terminoBuscado = "";
+
+            const canvas = document.getElementById("pdfCanvas");
+            const ctx = canvas.getContext("2d");
+
+            // ===========================
+            // 🔎 BÚSQUEDA EN PDF
+            // ===========================
             async function buscarEnPDF() {
               const termino = document.getElementById("buscadorPDF").value.trim().toLowerCase();
-              const resultsContainer = document.getElementById("resultadosPDF");
+              terminoBuscado = termino;
 
-              if (!termino) {
-                resultsContainer.innerHTML = `<p class="text-red-600">Ingresá una palabra para buscar.</p>`;
-                return;
-              }
+              const cont = document.getElementById("resultadosPDF");
+              cont.innerHTML = "<p>Buscando en el PDF...</p>";
 
-              resultsContainer.innerHTML = `<p class="text-gray-600">Buscando en el PDF, aguarde...</p>`;
-
-              const pdf = await pdfjsLib.getDocument(pdfURL).promise;
+              pdfDoc = await pdfjsLib.getDocument(pdfURL).promise;
 
               let resultados = [];
 
-              for (let i = 1; i <= pdf.numPages; i++) {
-                const page = await pdf.getPage(i);
-                const content = await page.getTextContent();
+              for (let i = 1; i <= pdfDoc.numPages; i++) {
+                const page = await pdfDoc.getPage(i);
+                const txt = await page.getTextContent();
+                const textoPlano = txt.items.map((t) => t.str).join(" ");
 
-                const textoPlano = content.items.map((t) => t.str).join(" ");
+                const idx = textoPlano.toLowerCase().indexOf(termino);
+                if (idx !== -1) {
+                  const ini = Math.max(0, idx - 80);
+                  const fin = idx + termino.length + 80;
+                  const fragmento = textoPlano.substring(ini, fin).replace(new RegExp(termino, "gi"), (m) => `<mark>${m}</mark>`);
 
-                const index = textoPlano.toLowerCase().indexOf(termino);
-                if (index !== -1) {
-                  const inicio = Math.max(0, index - 80);
-                  const fin = Math.min(textoPlano.length, index + termino.length + 80);
-                  const fragmento = textoPlano.substring(inicio, fin);
-
-                  resultados.push({
-                    page: i,
-                    text: fragmento.replace(new RegExp(termino, "gi"), (m) => `<mark>${m}</mark>`),
-                  });
+                  resultados.push({ pagina: i, texto: fragmento });
                 }
               }
 
               mostrarResultados(resultados, termino);
             }
 
-          function mostrarResultados(resultados, termino) {
-  const cont = document.getElementById("resultadosPDF");
+            function mostrarResultados(res, termino) {
+              const cont = document.getElementById("resultadosPDF");
 
-  if (resultados.length === 0) {
-    cont.innerHTML = `<p class="text-red-600">No se encontró "<strong>${termino}</strong>" en el PDF.</p>`;
-    return;
-  }
+              if (res.length === 0) {
+                cont.innerHTML = `<p class="text-red-600">No se encontró "<strong>${termino}</strong>"</p>`;
+                return;
+              }
 
-  cont.innerHTML = resultados
-    .map(
-      (r, index) => `
-      <div class="bg-gray-50 border border-purple-200 rounded-lg p-4 shadow-sm cursor-pointer hover:bg-purple-100 transition"
-           onclick="abrirPaginaPDF(${r.page})">
-        <p class="text-xs text-gray-500 mb-1">Página ${r.page}</p>
-        <p class="text-gray-800 leading-relaxed">${r.text}...</p>
-      </div>
-    `
-    )
-    .join("");
-}
+              cont.innerHTML = res
+                .map(
+                  (r) => `
+        <div class="bg-gray-50 border border-purple-200 p-4 rounded-lg shadow-sm cursor-pointer hover:bg-purple-100"
+             onclick="abrirPaginaPDF(${r.pagina})">
+          <p class="text-xs text-gray-500">Página ${r.pagina}</p>
+          <p class="text-gray-800">${r.texto}...</p>
+        </div>
+      `
+                )
+                .join("");
+            }
 
-async function abrirPaginaPDF(numPagina) {
-  const visor = document.getElementById("visorPDF");
-  const canvas = document.getElementById("pdfCanvas");
-  const ctx = canvas.getContext("2d");
+            // ===========================
+            // 📄 VISOR DE PDF
+            // ===========================
 
-  visor.classList.remove("hidden");
+            async function abrirPaginaPDF(numPagina) {
+              if (!pdfDoc) pdfDoc = await pdfjsLib.getDocument(pdfURL).promise;
 
-  const pdf = await pdfjsLib.getDocument(pdfURL).promise;
-  const page = await pdf.getPage(numPagina);
+              currentPage = numPagina;
+              document.getElementById("visorPDF").classList.remove("hidden");
+              document.getElementById("pdfPageNumber").innerText = currentPage;
 
-  const viewport = page.getViewport({ scale: 1.5 });
+              renderPage();
+            }
 
-  canvas.height = viewport.height;
-  canvas.width = viewport.width;
+            async function renderPage() {
+              const page = await pdfDoc.getPage(currentPage);
 
-  const renderContext = {
-    canvasContext: ctx,
-    viewport: viewport
-  };
+              const viewport = page.getViewport({ scale: currentScale });
 
-  await page.render(renderContext).promise;
-}
+              canvas.height = viewport.height;
+              canvas.width = viewport.width;
 
+              await page.render({
+                canvasContext: ctx,
+                viewport: viewport,
+              }).promise;
 
+              // 🔥 Resaltar término buscado en la página
+              if (terminoBuscado) {
+                resaltarTexto(page, terminoBuscado);
+              }
+            }
+
+            // ===========================
+            // 🔥 RESALTAR TEXTO
+            // ===========================
+
+            // async function resaltarTexto(page, termino) {
+            //   const text = await page.getTextContent();
+            //   const items = text.items;
+
+            //   ctx.fillStyle = "rgba(255, 235, 59, 0.4)"; // amarillo soft
+
+            //   items.forEach((item) => {
+            //     if (item.str.toLowerCase().includes(termino.toLowerCase())) {
+            //       const tx = item.transform;
+            //       const x = tx[4];
+            //       const y = canvas.height - tx[5];
+
+            //       ctx.fillRect(x, y - 14, item.width, 16);
+            //     }
+            //   });
+            // }
+
+            // ===========================
+            // 🔍 ZOOM
+            // ===========================
+
+            function zoomIn() {
+              currentScale += 0.2;
+              renderPage();
+            }
+
+            function zoomOut() {
+              currentScale = Math.max(0.6, currentScale - 0.2);
+              renderPage();
+            }
+
+            // ===========================
+            // ⏮ ⏭ NAVEGACIÓN
+            // ===========================
+
+            function nextPage() {
+              if (currentPage < pdfDoc.numPages) {
+                currentPage++;
+                renderPage();
+                document.getElementById("pdfPageNumber").innerText = currentPage;
+              }
+            }
+
+            function prevPage() {
+              if (currentPage > 1) {
+                currentPage--;
+                renderPage();
+                document.getElementById("pdfPageNumber").innerText = currentPage;
+              }
+            }
           </script>
 
           <!-- =============================== -->
@@ -2196,36 +2299,6 @@ async function abrirPaginaPDF(numPagina) {
               <p class="text-sm text-gray-700">Reformas constitucionales, mecanismos y evolución institucional.</p>
             </div>
           </div>
-
-          <!-- =============================== -->
-          <!-- AUTOEVALUACIÓN                 -->
-          <!-- =============================== -->
-
-          <h2 class="text-2xl font-semibold text-purple-800 mt-12 mb-4">Autoevaluación</h2>
-
-          <div class="bg-white p-6 rounded-lg shadow space-y-6">
-            <div>
-              <h3 class="font-semibold text-purple-800 mb-2">Pregunta 1</h3>
-              <p class="text-gray-700 mb-2">¿Qué caracteriza al control difuso de constitucionalidad?</p>
-              <ul class="list-disc ml-6 text-gray-600">
-                <li>A) Lo ejerce únicamente la Corte Suprema</li>
-                <li>B) Lo ejerce cualquier juez</li>
-                <li>C) Se aplica sólo en materia penal</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 class="font-semibold text-purple-800 mb-2">Pregunta 2</h3>
-              <p class="text-gray-700 mb-2">¿Cuál reforma incorporó el art. 14 bis?</p>
-              <ul class="list-disc ml-6 text-gray-600">
-                <li>A) Reforma de 1994</li>
-                <li>B) Reforma de 1957</li>
-                <li>C) Reforma de 1860</li>
-              </ul>
-            </div>
-
-            <!-- MÁS PREGUNTAS SI QUERÉS... -->
-          </div>
         </div>
       </main>
     </div>
@@ -2252,14 +2325,14 @@ async function abrirPaginaPDF(numPagina) {
       });
 
       // ACORDEONES
-      document.addEventListener("click", function (e) {
-        const btn = e.target.closest(".accordion-btn");
-        if (!btn) return;
+      // document.addEventListener("click", function (e) {
+      //   const btn = e.target.closest(".accordion-btn");
+      //   if (!btn) return;
 
-        const content = btn.nextElementSibling;
-        content.classList.toggle("hidden");
-        btn.classList.toggle("open");
-      });
+      //   const content = btn.nextElementSibling;
+      //   content.classList.toggle("hidden");
+      //   btn.classList.toggle("open");
+      // });
 
       // MENÚ HAMBURGUESA
       const sidebar = document.getElementById("sidebar");
@@ -2274,6 +2347,35 @@ async function abrirPaginaPDF(numPagina) {
       overlay.addEventListener("click", () => {
         sidebar.classList.add("-translate-x-full");
         overlay.classList.add("hidden");
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll(".accordion-btn");
+
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const content = btn.nextElementSibling;
+            const isOpen = content.classList.contains("open");
+
+            // Cerrar todos
+            document.querySelectorAll(".accordion-content").forEach((c) => {
+              c.classList.remove("open");
+            });
+
+            document.querySelectorAll(".accordion-btn i").forEach((i) => {
+              i.classList.remove("rotate-180");
+            });
+
+            // Si ya estaba abierto → fin
+            if (isOpen) return;
+
+            // Abrir este
+            content.classList.add("open");
+            btn.querySelector("i").classList.add("rotate-180");
+          });
+        });
       });
     </script>
   </body>
