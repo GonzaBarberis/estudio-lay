@@ -1,0 +1,2150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de Teoría y Derecho Constitucional</title>
+
+    <!-- TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- GOOGLE FONT – POPPINS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .unidad-btn-active {
+        background-color: #ede8ff !important;
+        color: #5b21b6 !important;
+        font-weight: 600;
+      }
+
+      .accordion-btn i {
+        transition: transform 0.2s ease;
+      }
+
+      .accordion-btn.open i {
+        transform: rotate(180deg);
+      }
+      .sidebar-item {
+        width: 100%;
+        text-align: left;
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        transition: all 0.15s ease-in-out;
+        color: #444;
+      }
+
+      .sidebar-item:hover {
+        background: #f3e8ff;
+        color: #5b21b6;
+        transform: translateX(4px);
+      }
+
+      .unidad-btn-active {
+        background: #ede8ff !important;
+        color: #5b21b6 !important;
+        font-weight: 600 !important;
+        box-shadow: inset 0 0 0 1px #c4b5fd;
+      }
+
+      .timeline::-webkit-scrollbar {
+        width: 8px;
+      }
+      .timeline::-webkit-scrollbar-thumb {
+        background: #c4b5fd;
+        border-radius: 10px;
+      }
+      .timeline::-webkit-scrollbar-track {
+        background: #f5f3ff;
+      }
+
+      .tl-item {
+        border-left: 4px solid #7c3aed;
+        padding-left: 16px;
+        padding-bottom: 4px;
+      }
+
+      .tl-item h3 {
+        font-weight: 600;
+        color: #5b21b6;
+        margin-bottom: 2px;
+      }
+
+      .tl-item p {
+        color: #4b5563;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- TOP NAVBAR (SOLO MÓVIL) -->
+    <header class="lg:hidden flex justify-between items-center px-5 py-4 bg-white shadow fixed top-0 left-0 w-full z-50">
+      <!-- Hamburguesa -->
+      <button id="menuToggle" class="text-2xl text-purple-700">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <h1 class="font-semibold text-lg">Curso Constitucional</h1>
+
+      <!-- Placeholder para mantener equilibrio del layout -->
+      <div class="w-6"></div>
+    </header>
+
+    <!-- OVERLAY (cuando se abre sidebar en móvil) -->
+    <div id="overlay" class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden"></div>
+
+    <div class="flex min-h-screen pt-16 lg:pt-0">
+      <!-- SIDEBAR -->
+      <aside
+        id="sidebar"
+        class="fixed lg:static top-0 left-0 h-full w-72 bg-white border-r shadow-xl transform -translate-x-full lg:translate-x-0 transition-all duration-300 z-50 flex flex-col bg-gradient-to-b from-white to-purple-50"
+      >
+        <!-- LOGO + TÍTULO -->
+        <div class="text-center py-8 px-6 border-b border-purple-100 bg-white/70 backdrop-blur-sm shadow-sm">
+          <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-purple-100 shadow-inner mb-3">
+            <i class="fa-solid fa-scale-balanced text-purple-700 text-3xl"></i>
+          </div>
+
+          <h2 class="text-xl font-bold leading-tight text-gray-800">Teoría y Derecho Constitucional</h2>
+          <p class="text-xs text-gray-500 tracking-widest mt-1">Para Lay con mucho Amor <i class="fas fa-heart text-red-500"></i></p>
+          <p class="text-xs text-gray-500 tracking-widest mt-1">Gon <i class="fas fa-heart text-purple-500"></i></p>
+        </div>
+
+        <!-- NAV -->
+        <nav class="flex-1 overflow-y-auto px-4 py-6 space-y-1">
+          <!-- SECCIÓN: Unidades -->
+          <p class="uppercase text-xs font-semibold text-gray-500 tracking-wider ml-2 mb-2">Unidades del Curso</p>
+
+          <!-- BOTONES -->
+          <button class="unidad-btn unidad-btn-active sidebar-item" data-target="unidad1"><i class="fa-solid fa-book mr-3"></i> Unidad 1</button>
+
+          <button class="unidad-btn sidebar-item" data-target="unidad2"><i class="fa-solid fa-book mr-3"></i> Unidad 2</button>
+
+          <button class="unidad-btn sidebar-item" data-target="unidad3"><i class="fa-solid fa-book mr-3"></i> Unidad 3</button>
+
+          <button class="unidad-btn sidebar-item" data-target="unidad4"><i class="fa-solid fa-book mr-3"></i> Unidad 4</button>
+
+          <button class="unidad-btn sidebar-item" data-target="unidad5"><i class="fa-solid fa-book mr-3"></i> Unidad 5</button>
+
+          <button class="unidad-btn sidebar-item" data-target="unidad6"><i class="fa-solid fa-book mr-3"></i> Unidad 6</button>
+
+          <button class="unidad-btn sidebar-item" data-target="unidad7"><i class="fa-solid fa-book mr-3"></i> Unidad 7</button>
+
+          <button class="unidad-btn sidebar-item" data-target="unidad8"><i class="fa-solid fa-book mr-3"></i> Unidad 8</button>
+
+          <button class="unidad-btn sidebar-item" data-target="unidad9"><i class="fa-solid fa-book mr-3"></i> Unidad 9</button>
+
+          <button class="unidad-btn sidebar-item" data-target="unidad10"><i class="fa-solid fa-book mr-3"></i> Unidad 10</button>
+
+          <button class="unidad-btn sidebar-item" data-target="unidad11"><i class="fa-solid fa-book mr-3"></i> Unidad 11</button>
+
+          <!-- BREAK LINE -->
+          <div class="my-4 border-t border-purple-200 opacity-70"></div>
+
+          <!-- SECCIÓN: Recursos -->
+          <p class="uppercase text-xs font-semibold text-gray-500 tracking-wider ml-2 mb-2">Biblioteca Visual</p>
+
+          <button class="unidad-btn sidebar-item" data-target="recursos">
+            <i class="fa-solid fa-lightbulb mr-3 text-yellow-500"></i> Recursos Visuales
+          </button>
+        </nav>
+
+        <!-- FOOTER -->
+        <div class="p-5 border-t bg-white/70 backdrop-blur-md shadow-inner text-center text-xs text-gray-500">© 2025 – Dashboard Constitucional</div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="flex-1 p-10 space-y-6">
+        <div id="unidad1" class="unidad-content">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 1
+            <span class="block text-lg text-gray-500 font-medium">Conceptos básicos del Derecho Constitucional</span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Conceptos de Constitución y Derecho Constitucional
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-2"><strong>Concepto formal o descriptivo de Constitución</strong></p>
+              <p>
+                La Constitución es la norma fundante del ordenamiento jurídico, aquella que determina cómo se crean las demás normas. Establece quién
+                dicta el derecho, cómo se dicta y cuáles son los contenidos básicos que debe respetar. Es la ley suprema y fundamento del sistema
+                jurídico.
+              </p>
+
+              <p class="mt-4 mb-2"><strong>Concepto normativo de Constitución</strong></p>
+              <p>
+                Expresa el “deber ser” del orden jurídico. La Constitución impone límites al poder estatal y garantiza espacios de libertad. Los
+                poderes públicos deben interpretarse siempre de manera restrictiva: <em>in dubio pro libertate</em>.
+              </p>
+
+              <p class="mt-4 mb-2"><strong>Concepto de Derecho Constitucional</strong></p>
+              <p>
+                Es el orden jurídico fundamental del Estado, basado en dos ideas centrales: la supremacía constitucional (art. 31) y la subordinación
+                del resto de las normas a la Norma Fundamental.
+              </p>
+
+              <p class="mt-4 mb-2"><strong>Concepto de Ciencia del Derecho Constitucional</strong></p>
+              <p>
+                Es la disciplina que estudia la organización fundamental del Estado, el funcionamiento del poder, su legitimación y los principios que
+                estructuran el orden constitucional.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: Plano Normativo / Sustantivo
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p>
+                La Constitución no solo describe instituciones: establece un deber ser. Su contenido sustantivo impone límites estrictos al poder,
+                define espacios de libertad y fija las reglas que estructuran la relación entre gobernantes y gobernados.
+              </p>
+
+              <p class="mt-3">
+                La interpretación constitucional debe hacerse desde la óptica del ciudadano: cada competencia del poder público debe leerse
+                restrictivamente y cada derecho debe leerse extensivamente.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO C -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado C: Derecho Constitucional Formal y Material
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-2"><strong>Derecho Constitucional Formal</strong></p>
+              <p>
+                Es la Constitución escrita: sistemática, codificada y con fuerza jurídica obligatoria. Su fuente es el poder constituyente originario.
+              </p>
+
+              <p class="mt-3 mb-2"><strong>Derecho Constitucional Material o Real</strong></p>
+              <p>
+                Se refiere a la Constitución efectiva, aquella que realmente rige en la práctica. Abarca la dimensión sociológica del poder y el
+                funcionamiento concreto de las instituciones.
+              </p>
+
+              <p class="mt-3 mb-2"><strong>Fuentes del Derecho Constitucional Material</strong></p>
+              <ul class="list-disc ml-6">
+                <li>La Constitución formal</li>
+                <li>Leyes con contenido constitucional</li>
+                <li>Tratados internacionales</li>
+                <li>Costumbre</li>
+                <li>Derecho judicial</li>
+                <li>Derecho internacional no contractual</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO D -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado D: Planos del Lenguaje Constitucional
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-2"><strong>Plano descriptivo</strong></p>
+              <p>Estudia el funcionamiento real del poder: prácticas políticas, instituciones, relaciones sociales y comportamientos efectivos.</p>
+
+              <p class="mt-3 mb-2"><strong>Plano normativo</strong></p>
+              <p>Analiza las normas constitucionales en sentido jurídico: competencias, prohibiciones, obligaciones y principios.</p>
+
+              <p class="mt-3 mb-2"><strong>Plano filosófico-político</strong></p>
+              <p>Busca los fundamentos axiológicos: justicia, legitimidad, valores y principios que orientan el orden constitucional.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO E -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado E: Derecho Constitucional y otras disciplinas
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-2"><strong>Relación con la Ciencia Política</strong></p>
+              <p>
+                La Ciencia Política estudia el poder político; el Derecho Constitucional lo organiza y limita. Por ello existe una relación de
+                interdependencia: sin comprensión del poder, no es posible comprender el derecho constitucional.
+              </p>
+
+              <p class="mt-3">
+                Respecto a otras ramas del derecho, se mantiene el principio de supremacía: toda norma infraconstitucional debe ajustarse a la
+                Constitución y no puede contradecirla.
+              </p>
+            </div>
+          </div>
+
+          <!-- FIN UNIDAD 1 -->
+        </div>
+        <div id="unidad2" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 2
+            <span class="block text-lg text-gray-500 font-medium"> Fundamentos conceptuales del Derecho Constitucional </span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Teoría e Historia Constitucional – de la polis al Estado moderno
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-3">
+                La teoría constitucional tiene raíces en la filosofía política clásica. Ya en la <strong>polis griega</strong>
+                se discutían conceptos como autoridad, legitimidad, libertad y participación. Obras como las de
+                <em>Aristóteles</em> sistematizaron las formas de gobierno y la idea de constitución como organización del poder.
+              </p>
+
+              <p class="mb-3">
+                En Roma se afianzó la distinción entre <strong>ius publicum</strong> e <strong>ius privatum</strong>, y se desarrollaron técnicas
+                jurídicas que luego influirían en la construcción del Estado moderno.
+              </p>
+
+              <p class="mb-3">
+                Durante la Edad Media, el poder se concebía como fragmentado y legitimado por el orden religioso. No existía aún la idea moderna de
+                “Estado” ni de una constitución como norma suprema.
+              </p>
+
+              <p class="mb-3">
+                El quiebre decisivo aparece con la modernidad: el proceso histórico de
+                <strong>centralización del poder</strong>, la formación de monarquías absolutas y el surgimiento del pensamiento racionalista generan
+                las condiciones para el nacimiento del Estado moderno.
+              </p>
+
+              <p class="mt-4 mb-2 font-semibold">Aportes decisivos:</p>
+              <ul class="list-disc ml-6">
+                <li><strong>Hobbes</strong>: idea de contrato social para justificar el poder estatal.</li>
+                <li><strong>Locke</strong>: límites al poder, defensa de derechos naturales, división de poderes.</li>
+                <li><strong>Montesquieu</strong>: formulación sistemática de la separación de poderes.</li>
+                <li><strong>Rousseau</strong>: soberanía popular y voluntad general.</li>
+              </ul>
+
+              <p class="mt-4">
+                Todos estos aportes confluyen en el nacimiento del <strong>constitucionalismo moderno</strong>, cuyo rasgo esencial es la existencia
+                de una Constitución como norma jurídica superior que organiza el poder y reconoce derechos.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: El Constitucionalismo como ideología
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-3">
+                El constitucionalismo no es solo una técnica jurídica: es una <strong>ideología política</strong>
+                que promueve la limitación del poder y la protección de la libertad individual. Surge como reacción frente al absolutismo monárquico.
+              </p>
+
+              <p class="mb-3">Se fundamenta en tres ideas centrales:</p>
+
+              <ul class="list-disc ml-6">
+                <li><strong>Existencia de un poder limitado</strong>: ningún poder es absoluto.</li>
+                <li><strong>Reconocimiento de derechos fundamentales</strong>: las libertades individuales son anteriores y superiores al Estado.</li>
+                <li>
+                  <strong>Necesidad de un texto constitucional</strong>: la Constitución como norma suprema que fija competencias, limita al poder y
+                  garantiza derechos.
+                </li>
+              </ul>
+
+              <p class="mt-4 mb-3">
+                A partir de las revoluciones americana (1776) y francesa (1789), el constitucionalismo se consolida como el modelo de organización
+                política basado en la supremacía constitucional, la división de poderes y la participación ciudadana.
+              </p>
+
+              <p>
+                Con el tiempo, el constitucionalismo evoluciona hacia modelos más inclusivos:
+                <strong>constitucionalismo social</strong> (derechos laborales, justicia social) y
+                <strong>constitucionalismo contemporáneo</strong> (control de constitucionalidad, tratados de derechos humanos, democracia
+                deliberativa).
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="unidad3" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 3
+            <span class="block text-lg text-gray-500 font-medium"> Poder Constituyente </span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Concepto y fundamentos del poder constituyente
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El <strong>poder constituyente</strong> es la facultad soberana de una comunidad política para darse una Constitución. Representa el
+                origen de todo el orden jurídico y político.
+              </p>
+
+              <p>A diferencia de los poderes constituidos (Ejecutivo, Legislativo, Judicial), el poder constituyente:</p>
+
+              <ul class="list-disc ml-6 mt-2">
+                <li>no está limitado por normas anteriores,</li>
+                <li>crea el marco institucional básico del Estado,</li>
+                <li>expresa la voluntad política fundamental del pueblo.</li>
+              </ul>
+
+              <p class="mt-4">Su legitimidad se basa en la idea de <strong>soberanía popular</strong>: el pueblo es el titular último del poder.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: Poder constituyente originario
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                Es el poder encargado de crear por primera vez una Constitución o de reemplazarla totalmente. Se caracteriza por ser:
+              </p>
+
+              <ul class="list-disc ml-6">
+                <li><strong>Inicial</strong>: no deriva de ninguna norma superior.</li>
+                <li><strong>Ilimitado</strong> en términos jurídicos tradicionales (no está sometido a formas previas).</li>
+                <li><strong>Extraordinario</strong>: se ejerce en momentos fundacionales o de cambio político profundo.</li>
+              </ul>
+
+              <p class="mt-4">
+                Sin embargo, la doctrina contemporánea reconoce que incluso el poder originario debe respetar
+                <strong>límites éticos y de derechos humanos</strong>, aunque no existan límites jurídicos estrictos.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO C -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado C: Poder constituyente derivado o de reforma
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-3">
+                Es el poder encargado de modificar la Constitución existente. A diferencia del originario, <strong>sí está limitado</strong> por la
+                propia Constitución.
+              </p>
+
+              <p class="mt-3"><strong>Características:</strong></p>
+              <ul class="list-disc ml-6">
+                <li><strong>Secundario</strong>: deriva de la Constitución vigente.</li>
+                <li><strong>Reglado</strong>: debe seguir procedimientos específicos.</li>
+                <li><strong>Limitado</strong>: no puede alterar la esencia del orden constitucional.</li>
+              </ul>
+
+              <p class="mt-4">
+                En Argentina, está regulado en el <strong>art. 30</strong> de la Constitución Nacional: el Congreso declara la necesidad de reforma y
+                luego se convoca a una Convención Constituyente.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO D -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado D: Límites materiales y procedimentales al poder de reforma
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-3">
+                Aunque la reforma constitucional es amplia, la doctrina reconoce que existen
+                <strong>límites materiales</strong> (contenido) y <strong>límites procedimentales</strong> (forma).
+              </p>
+
+              <p class="mt-3"><strong>Límites procedimentales:</strong></p>
+              <ul class="list-disc ml-6">
+                <li>El Congreso debe declarar la necesidad de reforma (mayorías especiales).</li>
+                <li>Solo una Convención Constituyente puede realizar la reforma.</li>
+                <li>La Convención solo puede reformar los puntos habilitados.</li>
+              </ul>
+
+              <p class="mt-4"><strong>Límites materiales:</strong></p>
+              <ul class="list-disc ml-6">
+                <li>Respeto por la forma republicana (art. 1).</li>
+                <li>Respeto por derechos humanos y principios democráticos.</li>
+                <li>Imposibilidad de suprimir la esencia del sistema constitucional.</li>
+              </ul>
+
+              <p class="mt-4">
+                La doctrina afirma que aun donde no hay “cláusulas pétreas”, existen límites implícitos derivados de la estructura misma del orden
+                constitucional.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO E -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado E: Reformas constitucionales argentinas
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-3">
+                La Argentina tuvo varias reformas, parciales y totales, a lo largo de su historia. Cada una respondió a contextos políticos y
+                necesidades institucionales distintas.
+              </p>
+
+              <p class="mt-3"><strong>Principales reformas:</strong></p>
+
+              <ul class="list-disc ml-6">
+                <li><strong>1860</strong>: Adecuación tras la incorporación de Buenos Aires.</li>
+                <li><strong>1866</strong>: Competencias tributarias del Congreso.</li>
+                <li><strong>1898</strong>: Atribuciones del Poder Ejecutivo.</li>
+                <li><strong>1957</strong>: Inclusión del art. 14 bis (derechos sociales).</li>
+                <li>
+                  <strong>1994</strong>: Reforma integral — Jefe de Gabinete, autonomía de CABA, tratados con jerarquía constitucional, Consejo de la
+                  Magistratura, Defensor del Pueblo, iniciativa popular, etc.
+                </li>
+              </ul>
+
+              <p class="mt-4">
+                La reforma de <strong>1994</strong> es la más trascendente desde 1853, y estructuró el sistema constitucional contemporáneo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="unidad4" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 4
+            <span class="block text-lg text-gray-500 font-medium"> El Estado y sus elementos </span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Concepto de Estado
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El <strong>Estado</strong> es una organización política-jurídica soberana, integrada por una población asentada permanentemente en un
+                territorio, sometida a un conjunto de normas que regulan la convivencia y organizada bajo un poder institucionalizado.
+              </p>
+
+              <p>
+                Desde la teoría constitucional, el Estado es el soporte indispensable de la Constitución: no existe constitución sin Estado, y el
+                Estado moderno se define como un orden jurídico centralizado.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: Elementos constitutivos del Estado
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <ul class="list-disc ml-6 space-y-3">
+                <li>
+                  <strong>Población</strong>: conjunto de personas que se vinculan de forma estable al Estado mediante un lazo jurídico-político.
+                </li>
+
+                <li><strong>Territorio</strong>: ámbito espacial dentro del cual el Estado ejerce su jurisdicción exclusiva.</li>
+
+                <li><strong>Poder o Gobierno</strong>: estructura institucional que organiza el ejercicio de la autoridad pública.</li>
+
+                <li>
+                  <strong>Soberanía</strong>: atributo que expresa la autonomía del Estado para decidir sin subordinación frente a poderes externos.
+                </li>
+              </ul>
+
+              <p class="mt-4">
+                Los elementos son interdependientes: sin territorio no hay jurisdicción; sin población no hay sujeto político; sin poder no existe
+                organización estatal.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO C -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado C: Población y ciudadanía
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-3">
+                La población está integrada por <strong>habitantes</strong> y <strong>ciudadanos</strong>. Los habitantes comprenden tanto nacionales
+                como extranjeros.
+              </p>
+
+              <p>
+                La <strong>ciudadanía</strong> es un estatus jurídico-político que habilita la participación activa en la vida democrática (sufragio,
+                elegibilidad, etc.). En Argentina, la ciudadanía está regulada en la Constitución y la legislación electoral.
+              </p>
+
+              <p class="mt-3">
+                La población también se vincula al Estado mediante derechos y obligaciones: obediencia a la ley, tributos, defensa del Estado, entre
+                otros.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO D -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado D: Territorio del Estado
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">El territorio es el espacio geográfico sobre el cual el Estado ejerce su poder. Comprende:</p>
+
+              <ul class="list-disc ml-6">
+                <li>Espacio terrestre</li>
+                <li>Espacio aéreo</li>
+                <li>Espacio marítimo</li>
+              </ul>
+
+              <p class="mt-4">
+                El territorio no implica propiedad, sino <strong>jurisdicción</strong>: el poder para dictar y hacer cumplir normas dentro de ese
+                espacio.
+              </p>
+
+              <p class="mt-3">En Argentina, el territorio se organiza federalmente: Nación, provincias y Ciudad Autónoma de Buenos Aires.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO E -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado E: Poder / Gobierno
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-3">
+                El gobierno es la manifestación del poder estatal. Organiza y dirige la vida política del Estado. En el constitucionalismo moderno, la
+                noción central es la <strong>división de poderes</strong>, que busca evitar la concentración del poder.
+              </p>
+
+              <ul class="list-disc ml-6 mt-2">
+                <li>Poder Legislativo: crea las leyes</li>
+                <li>Poder Ejecutivo: administra y ejecuta</li>
+                <li>Poder Judicial: interpreta la ley y controla la constitucionalidad</li>
+              </ul>
+
+              <p class="mt-4">Esta división no es absoluta sino funcional: los poderes cooperan y se equilibran entre sí.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO F -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado F: Formas de Estado y Formas de Gobierno
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4"><strong>Formas de Estado:</strong></p>
+              <ul class="list-disc ml-6 mb-4">
+                <li><strong>Estado unitario</strong>: poder centralizado, una sola soberanía.</li>
+                <li><strong>Estado federal</strong>: coexistencia de un Estado central y estados miembros con autonomía (Argentina).</li>
+                <li><strong>Estado regional</strong>: modelo intermedio (España, Italia).</li>
+              </ul>
+
+              <p class="mb-4"><strong>Formas de Gobierno:</strong></p>
+              <ul class="list-disc ml-6">
+                <li><strong>República</strong>: gobierno limitado, responsabilidad de los gobernantes, periodicidad en los cargos.</li>
+                <li><strong>Monarquía constitucional</strong>: el monarca reina pero no gobierna.</li>
+                <li><strong>Parlamentarismo</strong>: el Ejecutivo depende del Parlamento.</li>
+                <li><strong>Presidencialismo</strong>: separación más estricta entre Ejecutivo y Legislativo (Argentina, EE.UU.).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="unidad5" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 5
+            <span class="block text-lg text-gray-500 font-medium"> La Constitución Nacional Argentina </span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Concepto y función de la Constitución
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                La Constitución es la norma jurídica suprema del ordenamiento argentino. Su función central es organizar el poder, establecer límites
+                y garantizar derechos. Proporciona estabilidad institucional y continuidad jurídica.
+              </p>
+
+              <p>Emplea dos tipos de normas:</p>
+
+              <ul class="list-disc ml-6 mt-2">
+                <li><strong>Normas organizativas</strong>: regulan el funcionamiento del Estado.</li>
+                <li><strong>Normas dogmáticas</strong>: reconocen derechos, garantías y principios.</li>
+              </ul>
+
+              <p class="mt-4">La Constitución expresa el pacto político fundamental del país y define la identidad institucional del Estado.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: Partes de la Constitución
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p>Tradicionalmente, la Constitución se divide en dos grandes secciones:</p>
+
+              <ul class="list-disc ml-6 mt-3">
+                <li><strong>Parte dogmática</strong> (arts. 1 al 43)</li>
+                <li><strong>Parte orgánica</strong> (arts. 44 al 129)</li>
+              </ul>
+
+              <p class="mt-4">Además, el Preámbulo cumple una función interpretativa y axiológica, orientando los fines del orden constitucional.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO C -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado C: El Preámbulo
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">El Preámbulo establece los valores y objetivos del orden constitucional argentino. Entre ellos:</p>
+
+              <ul class="list-disc ml-6">
+                <li>afianzar la justicia,</li>
+                <li>consolidar la paz interior,</li>
+                <li>proveer la defensa común,</li>
+                <li>promover el bienestar general,</li>
+                <li>asegurar los beneficios de la libertad.</li>
+              </ul>
+
+              <p class="mt-4">
+                Su sentido es político y axiológico; no contiene derechos directamente operativos, pero orienta la interpretación de toda la
+                Constitución.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO D -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado D: Parte Dogmática – Derechos y Garantías
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">Esta sección reconoce y protege los derechos fundamentales de las personas. Incluye:</p>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li><strong>Derechos civiles</strong>: propiedad, privacidad, igualdad, libertad.</li>
+                <li><strong>Derechos políticos</strong>: participación, sufragio, acceso a cargos.</li>
+                <li><strong>Derechos sociales</strong> (art. 14 bis): trabajo, seguridad social, sindicatos.</li>
+                <li><strong>Derechos de incidencia colectiva</strong>: ambiente, consumidores, usuarios.</li>
+                <li><strong>Garantías</strong>: amparo, hábeas corpus, hábeas data.</li>
+              </ul>
+
+              <p class="mt-4">
+                Los tratados internacionales de derechos humanos incorporados en 1994 integran esta parte y tienen jerarquía constitucional.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO E -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado E: Parte Orgánica – Organización del Poder
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p>Regula la estructura institucional del Estado argentino:</p>
+
+              <ul class="list-disc ml-6 mt-3">
+                <li><strong>Poder Legislativo</strong>: Congreso bicameral (Senado y Diputados).</li>
+                <li><strong>Poder Ejecutivo</strong>: Presidente, Vicepresidente, ministros y Jefe de Gabinete.</li>
+                <li><strong>Poder Judicial</strong>: Corte Suprema y tribunales inferiores.</li>
+                <li><strong>Gobiernos provinciales</strong> y autonomía municipal.</li>
+                <li><strong>Ciudad Autónoma de Buenos Aires</strong>, reconocida en 1994.</li>
+              </ul>
+
+              <p class="mt-4">Esta parte organiza las competencias, funciones y limitaciones de los poderes públicos.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO F -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado F: Supremacía y jerarquía constitucional
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                La Constitución es la norma suprema del orden jurídico argentino (art. 31). Toda ley, acto o autoridad debe subordinarse a ella.
+              </p>
+
+              <p class="mb-3"><strong>Jerarquía normativa:</strong></p>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Constitución Nacional</li>
+                <li>Tratados internacionales con jerarquía constitucional</li>
+                <li>Leyes nacionales</li>
+                <li>Normativas provinciales y municipales</li>
+              </ul>
+
+              <p class="mt-4">El control de constitucionalidad —tanto difuso como concentrado— asegura la supremacía constitucional.</p>
+            </div>
+          </div>
+        </div>
+        <div id="unidad6" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 6
+            <span class="block text-lg text-gray-500 font-medium"> El Poder Legislativo Argentino </span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Naturaleza y función del Poder Legislativo
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El Poder Legislativo es el órgano representativo por excelencia del sistema republicano. Su función primordial es la creación de
+                leyes, pero también constituye un espacio institucional de debate público, control político y expresión de la soberanía popular.
+              </p>
+
+              <p>El Congreso argentino es <strong>bicameral</strong>, compuesto por:</p>
+
+              <ul class="list-disc ml-6 mt-3">
+                <li><strong>Cámara de Diputados</strong>, expresión del pueblo de la Nación.</li>
+                <li><strong>Cámara de Senadores</strong>, representación de las provincias y CABA.</li>
+              </ul>
+
+              <p class="mt-4">La existencia de dos cámaras cumple funciones de equilibrio, revisión y legitimidad ampliada.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: El Congreso — Composición, duración y requisitos
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <h3 class="text-lg font-semibold text-purple-900 mb-2">Cámara de Diputados</h3>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Representa al pueblo (art. 45).</li>
+                <li>Diputados electos directamente por el pueblo.</li>
+                <li>Duración del mandato: <strong>4 años</strong>, renovación por mitades cada 2 años.</li>
+                <li>Requisitos: 25 años, 4 años de ciudadanía, ser nativo o con 2 años de residencia en la provincia que represente.</li>
+              </ul>
+
+              <h3 class="text-lg font-semibold text-purple-900 mb-2">Cámara de Senadores</h3>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Representa a las provincias y a la Ciudad Autónoma de Buenos Aires.</li>
+                <li>3 senadores por cada jurisdicción (dos por la mayoría, uno por la minoría).</li>
+                <li>Mandato de <strong>6 años</strong>, renovación por tercios.</li>
+                <li>Requisitos: 30 años, 6 años de ciudadanía, renta anual mínima y ser nativo o tener 2 años de residencia.</li>
+              </ul>
+
+              <p>Ambas cámaras eligen sus autoridades, dictan sus reglamentos y juzgan la validez de los títulos de sus miembros.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO C -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado C: Atribuciones del Congreso (Art. 75)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">El artículo 75 enumera las atribuciones más importantes del Congreso:</p>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Legislar en materia civil, penal, comercial, laboral y de seguridad social.</li>
+                <li>Fijar impuestos y contribuciones.</li>
+                <li>Aprobar el presupuesto nacional.</li>
+                <li>Declarar la guerra y aprobar tratados de paz.</li>
+                <li>Reglamentar el comercio interior y exterior.</li>
+                <li>Dictar el Código Aduanero.</li>
+                <li>Asegurar los derechos indígenas (inc. 17).</li>
+                <li>Promover el desarrollo humano, el empleo y la educación (incs. 18, 19).</li>
+                <li>Dar jerarquía constitucional a tratados de derechos humanos (inc. 22).</li>
+              </ul>
+
+              <p class="mt-4">Las atribuciones del Congreso son centrales para el funcionamiento del Estado federal y democrático.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO D -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado D: Procedimiento de formación y sanción de las leyes
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">El procedimiento legislativo argentino incluye varias etapas formales establecidas por la Constitución:</p>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li><strong>Iniciativa</strong>: puede provenir de diputados, senadores, Poder Ejecutivo o iniciativas populares.</li>
+                <li><strong>Discusión</strong>: audiencia en comisiones y debate en el recinto.</li>
+                <li><strong>Sanción</strong>: aprobación por ambas cámaras (bicameralismo).</li>
+                <li><strong>Promulgación</strong>: aceptación formal por el Poder Ejecutivo.</li>
+                <li><strong>Publicación</strong>: requisito para su vigencia obligatoria.</li>
+              </ul>
+
+              <p class="mt-4">El Poder Ejecutivo puede vetar total o parcialmente una ley, y el Congreso puede insistir con mayoría especial.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO E -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado E: Control político y otras funciones del Congreso
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">Además de legislar, el Congreso ejerce un importante rol de <strong>control político</strong> y fiscalización:</p>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Interpelación a ministros.</li>
+                <li>Pedido de informes al Poder Ejecutivo.</li>
+                <li>Aprobación o rechazo de DNU.</li>
+                <li>Juicio político (Diputados acusa, Senado juzga).</li>
+                <li>Revisión de la administración pública y organismos de control.</li>
+              </ul>
+
+              <p>Este conjunto de atribuciones garantiza la vigencia del sistema republicano, el equilibrio de poderes y la transparencia.</p>
+            </div>
+          </div>
+        </div>
+        <div id="unidad7" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 7
+            <span class="block text-lg text-gray-500 font-medium"> El Poder Ejecutivo Argentino </span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Naturaleza del Poder Ejecutivo
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El Poder Ejecutivo argentino adopta la forma de un <strong>órgano unipersonal</strong>, cuyo titular es el Presidente de la Nación.
+                Esta configuración sigue el modelo presidencialista clásico, diferenciándose del parlamentarismo.
+              </p>
+
+              <p>
+                La Constitución lo concibe como el órgano encargado de la administración general del país, garante de la ejecución de las leyes y
+                figura central del equilibrio institucional.
+              </p>
+
+              <p class="mt-4">
+                El art. 87 establece claramente:
+                <em>“El Poder Ejecutivo de la Nación será desempeñado por un ciudadano con el título de Presidente de la Nación Argentina.”</em>
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: El Presidente de la Nación — Rol y características
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">El Presidente es simultáneamente:</p>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Jefe de Estado</li>
+                <li>Jefe de Gobierno</li>
+                <li>Responsable político de la administración general</li>
+                <li>Comandante en Jefe de las Fuerzas Armadas</li>
+                <li>Jefe de la política exterior</li>
+              </ul>
+
+              <p>
+                Su figura condensa atribuciones políticas, jurídicas y administrativas, lo que históricamente ha generado debates sobre el alcance del
+                presidencialismo argentino.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO C -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado C: Requisitos, duración y sistema de elección
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <h3 class="font-semibold text-purple-900 mb-2">Requisitos para ser Presidente (art. 89)</h3>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Ser argentino nativo o hijo de ciudadano nativo.</li>
+                <li>Tener 30 años de edad.</li>
+                <li>Pertenecer a la comunión católica (requisito eliminado en 1994).</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Duración del Mandato</h3>
+
+              <p class="mb-4">
+                El período presidencial es de <strong>4 años</strong>, con posibilidad de una sola reelección inmediata (art. 90). Luego de dos
+                mandatos consecutivos, debe mediar un período para volver a postularse.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Sistema Electoral</h3>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Elección directa por el pueblo.</li>
+                <li>Sistema de balotaje (art. 97 y 98).</li>
+                <li>Requiere 45% de los votos o 40% con 10 puntos de diferencia.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO D -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado D: Atribuciones del Presidente (art. 99)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">El artículo 99 enumera las facultades presidenciales. Entre las más relevantes:</p>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Es el jefe supremo de la Nación y de las Fuerzas Armadas.</li>
+                <li>Expide instrucciones y reglamentos necesarios para la ejecución de las leyes.</li>
+                <li>Participa en la formación de las leyes.</li>
+                <li>Promulga, veta y publica las leyes.</li>
+                <li>Designa jueces de la Corte con acuerdo del Senado.</li>
+                <li>Designa y remueve ministros, funcionarios y embajadores.</li>
+                <li>Conduce las relaciones exteriores.</li>
+                <li>Celebración de tratados internacionales.</li>
+                <li>Interviene federalmente una provincia (con autorización del Congreso).</li>
+                <li>Dicta Decretos de Necesidad y Urgencia (DNU), con control del Congreso.</li>
+              </ul>
+
+              <p>
+                Tras la reforma de 1994, el equilibrio entre Ejecutivo y Congreso fue reforzado con límites al uso del decreto y con el sistema de
+                jefatura de gabinete.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO E -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado E: Jefatura de Gabinete y Ministros (reforma 1994)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                La reforma constitucional de 1994 creó la figura del
+                <strong>Jefe de Gabinete de Ministros</strong>, con el fin de moderar el presidencialismo y fortalecer la responsabilidad política del
+                Ejecutivo.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Funciones del Jefe de Gabinete (art. 100)</h3>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Ejercer la administración general del país.</li>
+                <li>Coordinar y controlar la labor de los ministros.</li>
+                <li>Enviar al Congreso el presupuesto nacional.</li>
+                <li>Concurrir a las sesiones del Congreso y brindar informes.</li>
+                <li>Ser responsable político ante el Congreso.</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Los Ministros</h3>
+
+              <p>
+                Son colaboradores directos del Presidente y responsables de la administración de cada área. Responden políticamente por los actos que
+                refrendan.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO F -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado F: Funciones políticas, administrativas y militares
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <h3 class="font-semibold text-purple-900 mb-2">Funciones políticas</h3>
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Dirección de la política nacional.</li>
+                <li>Relaciones exteriores.</li>
+                <li>Nominación de funcionarios clave.</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Funciones administrativas</h3>
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Ejecución del presupuesto.</li>
+                <li>Organización de la administración pública.</li>
+                <li>Supervisión de organismos descentralizados.</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Funciones militares</h3>
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Mando de las Fuerzas Armadas.</li>
+                <li>Designación de oficiales superiores.</li>
+                <li>Conducción estratégica y defensa nacional.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="unidad8" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 8
+            <span class="block text-lg text-gray-500 font-medium"> El Ministerio Público y los Órganos de Control </span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Naturaleza y funciones del Ministerio Público
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El <strong>Ministerio Público</strong>, incorporado a nivel constitucional en la reforma de 1994 (arts. 120 y ss.), es un órgano
+                independiente con autonomía funcional y autarquía financiera.
+              </p>
+
+              <p class="mb-4">
+                Sus funciones esenciales involucran la promoción de la actuación de la justicia, la defensa de la legalidad y la protección de los
+                intereses generales de la sociedad.
+              </p>
+
+              <p class="mb-4">
+                La Constitución le asigna un rol central en el sistema republicano, evitando la concentración de poder y fortaleciendo el control
+                institucional.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Funciones fundamentales:</h3>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Promover la actuación de la justicia.</li>
+                <li>Defender la legalidad y el interés público.</li>
+                <li>Intervenir en procesos penales, civiles y administrativos.</li>
+                <li>Actuar de manera independiente del Poder Ejecutivo.</li>
+                <li>Proteger los derechos humanos y colectivos.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: Organización del Ministerio Público Fiscal y de la Defensa
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">El Ministerio Público se compone de dos estructuras principales:</p>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li><strong>Ministerio Público Fiscal (MPF)</strong>: actúa en defensa de la legalidad y promueve la acción penal.</li>
+                <li>
+                  <strong>Ministerio Público de la Defensa (MPD)</strong>: garantiza asistencia jurídica a personas vulnerables y protege derechos
+                  fundamentales.
+                </li>
+              </ul>
+
+              <p class="mb-4">
+                Ambos organismos funcionan con independencia del Poder Ejecutivo y cuentan con jefaturas propias (Procurador General y Defensor
+                General).
+              </p>
+
+              <p>La estructura interna incluye fiscales, defensores públicos, asesores y órganos técnicos auxiliares.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO C -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado C: La Auditoría General de la Nación (AGN)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                La <strong>Auditoría General de la Nación</strong> (AGN), prevista en el art. 85, es el órgano de control externo del sector público
+                nacional.
+              </p>
+
+              <p class="mb-4">
+                Depende del Congreso y audita la gestión económica, financiera y patrimonial del Estado. Su titular es propuesto por el partido
+                político de la oposición con mayor número de legisladores.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Funciones de la AGN:</h3>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Controlar la ejecución del presupuesto.</li>
+                <li>Evaluar programas, obras y contrataciones públicas.</li>
+                <li>Emitir informes públicos y vinculantes para el Congreso.</li>
+                <li>Detectar irregularidades y recomendar medidas correctivas.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO D -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado D: La Sindicatura General de la Nación (SIGEN)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                La <strong>SIGEN</strong> actúa como el órgano rector del sistema de control interno dentro de la Administración Pública Nacional.
+              </p>
+
+              <p class="mb-4">Depende del Poder Ejecutivo y coordina las unidades de auditoría interna de cada organismo.</p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Funciones principales:</h3>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Supervisar el control interno y la legalidad administrativa.</li>
+                <li>Evaluar el uso eficiente de los recursos públicos.</li>
+                <li>Detectar desvíos o irregularidades.</li>
+                <li>Vigilar el cumplimiento de normas y procedimientos.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO E -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado E: El Defensor del Pueblo (art. 86)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El <strong>Defensor del Pueblo</strong> es un órgano independiente creado para la defensa de los derechos humanos, los derechos
+                colectivos y los intereses difusos.
+              </p>
+
+              <p class="mb-4">Depende del Congreso pero actúa con plena autonomía funcional.</p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Atribuciones del Defensor:</h3>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Investigar irregularidades administrativas.</li>
+                <li>Recibir denuncias de particulares.</li>
+                <li>Requerir información a los organismos públicos.</li>
+                <li>Promover acciones judiciales —incluido el amparo— contra el Estado.</li>
+              </ul>
+
+              <p class="mt-4">Su legitimación activa ha sido confirmada en materia ambiental, servicios públicos y derechos sociales.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO F -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado F: Control externo e interno del Estado
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El sistema de control constitucional argentino combina mecanismos internos y externos que aseguran la transparencia y la
+                responsabilidad de los funcionarios públicos.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Control externo</h3>
+              <ul class="list-disc ml-6 mb-4 space-y-2">
+                <li>Ejercido por el Congreso.</li>
+                <li>Realizado técnicamente por la AGN.</li>
+                <li>Incluye revisión del presupuesto, ejecución y desempeño estatal.</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Control interno</h3>
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Ejecutado por SIGEN y las unidades de auditoría interna.</li>
+                <li>Busca prevenir irregularidades dentro de la administración pública.</li>
+                <li>Evalúa eficiencia, economía y legalidad.</li>
+              </ul>
+
+              <p class="mt-4">
+                Ambos mecanismos conforman un sistema equilibrado que garantiza la responsabilidad republicana y evita abusos del poder estatal.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="unidad9" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 9
+            <span class="block text-lg text-gray-500 font-medium"> El Poder Judicial y la Justicia Constitucional </span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Naturaleza y rol institucional del Poder Judicial
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El <strong>Poder Judicial</strong>, previsto en los arts. 108 a 120, constituye uno de los pilares del sistema republicano. Su función
+                esencial es resolver conflictos, garantizar derechos y ejercer el control de constitucionalidad.
+              </p>
+
+              <p class="mb-4">
+                A diferencia de los otros poderes, el Judicial no representa a la mayoría: su legitimidad deriva de la
+                <strong>Constitución</strong> y de la independencia que permite actuar sin presiones políticas.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Principios esenciales:</h3>
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Independencia funcional y económica.</li>
+                <li>Inamovilidad de los jueces mientras dure su buena conducta.</li>
+                <li>Remoción únicamente tras juicio político o jurado de enjuiciamiento.</li>
+                <li>Sumisión a la Constitución como norma suprema.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: Organización del Poder Judicial de la Nación
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">El Poder Judicial federal se compone de:</p>
+
+              <ul class="list-disc ml-6 mb-4 space-y-2">
+                <li><strong>Corte Suprema de Justicia</strong></li>
+                <li><strong>Tribunales inferiores</strong>: Cámaras Federales, Juzgados Federales, Cámaras y Juzgados Nacionales.</li>
+              </ul>
+
+              <p class="mb-4">
+                La creación de tribunales corresponde al Congreso, que también determina su jurisdicción, competencia y organización.
+              </p>
+
+              <p>
+                La designación de jueces federales se realiza por el Poder Ejecutivo con acuerdo del Senado, previo proceso en el Consejo de la
+                Magistratura.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO C -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado C: El Consejo de la Magistratura (art. 114)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El <strong>Consejo de la Magistratura</strong> interviene en la <strong>selección de jueces</strong> y en la
+                <strong>administración del Poder Judicial</strong>.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Funciones constitucionales:</h3>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Seleccionar candidatos para cubrir vacantes judiciales.</li>
+                <li>Emitir ternas vinculantes para el Poder Ejecutivo.</li>
+                <li>Administrar el Poder Judicial (presupuesto, organización, recursos).</li>
+                <li>Ejercer facultades disciplinarias sobre jueces inferiores.</li>
+                <li>Acusar jueces ante el Jurado de Enjuiciamiento.</li>
+              </ul>
+
+              <p>Su composición debe asegurar equilibrio entre estamentos políticos y técnicos (jueces, abogados, académicos, legisladores).</p>
+            </div>
+          </div>
+
+          <!-- APARTADO D -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado D: El Jurado de Enjuiciamiento (art. 115)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El <strong>Jurado de Enjuiciamiento</strong> tiene a su cargo la remoción de jueces por mal desempeño, delito en el ejercicio de sus
+                funciones o crímenes comunes.
+              </p>
+
+              <p class="mb-4">Está integrado por jueces, abogados y legisladores, en número y forma determinados por la ley.</p>
+
+              <p>El procedimiento busca proteger la independencia judicial evitando presiones políticas directas.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO E -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado E: Atribuciones de la Corte Suprema de Justicia
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">La <strong>Corte Suprema</strong> es el último intérprete de la Constitución y tribunal máximo del país.</p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Competencias principales:</h3>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Resolver casos de competencia originaria (art. 117).</li>
+                <li>Ejercer control de constitucionalidad y convencionalidad.</li>
+                <li>Uniformar la jurisprudencia federal.</li>
+                <li>Actuar en conflictos entre provincias, Nación y poderes del Estado.</li>
+                <li>Conocer en recursos extraordinarios federales.</li>
+              </ul>
+
+              <p>Su rol es central en el sistema republicano al limitar excesos del poder estatal y proteger derechos fundamentales.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO F -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado F: El control de constitucionalidad
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El <strong>control de constitucionalidad</strong> es la facultad judicial de declarar la invalidez de normas o actos contrarios a la
+                Constitución.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Características del sistema argentino:</h3>
+
+              <ul class="list-disc ml-6 mb-4 space-y-2">
+                <li><strong>Difuso</strong>: lo ejercen todos los jueces del país.</li>
+                <li><strong>Concreto</strong>: sólo en casos judiciales reales.</li>
+                <li><strong>Requiere agravio</strong>: debe existir afectación directa.</li>
+                <li><strong>Efectos relativos</strong>: la sentencia vale para el caso (no erga omnes).</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Control de constitucionalidad vs. Control de convencionalidad</h3>
+
+              <p class="mb-4">
+                Los jueces también deben confrontar las normas internas con tratados internacionales de derechos humanos (art. 75 inc. 22), asegurando
+                su primacía.
+              </p>
+
+              <p>El sistema argentino se complementa con la jurisprudencia de la Corte Interamericana (caso “Giroldi”, “Mazzeo”, entre otros).</p>
+            </div>
+          </div>
+        </div>
+        <div id="unidad10" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 10
+            <span class="block text-lg text-gray-500 font-medium"> Sistema Electoral y Partidos Políticos </span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Régimen constitucional de los partidos políticos (arts. 37, 38 y 75 inc. 22)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                La reforma constitucional de 1994 dio jerarquía constitucional a la existencia de los
+                <strong>partidos políticos</strong>, al reconocerlos como instituciones fundamentales del sistema democrático (art. 38).
+              </p>
+
+              <p class="mb-4">
+                Los partidos son <strong>instrumentos de la representación política</strong> y su funcionamiento debe ser democrático, transparente y
+                respetuoso de los derechos humanos.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Principios clave del art. 38:</h3>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Organización democrática interna.</li>
+                <li>Publicidad y transparencia en el financiamiento.</li>
+                <li>Acceso equitativo a medios de comunicación.</li>
+                <li>Derecho a competir en elecciones.</li>
+                <li>Responsabilidad constitucional del Estado de garantizar su existencia.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: Funciones, organización y financiamiento de los partidos
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                Los partidos cumplen un rol esencial en la formación de la voluntad política del pueblo. Articulan intereses, reclutan liderazgos y
+                estructuran la competencia electoral.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-3">Funciones principales:</h3>
+
+              <ul class="list-disc ml-6 mb-4 space-y-2">
+                <li>Integra la representación política institucional.</li>
+                <li>Selecciona candidatos para cargos públicos.</li>
+                <li>Elabora programas de gobierno.</li>
+                <li>Canaliza demandas sociales hacia el sistema político.</li>
+                <li>Controla al gobierno desde la oposición.</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Financiamiento:</h3>
+
+              <p class="mb-4">La ley exige transparencia y control estatal. El financiamiento puede ser:</p>
+
+              <ul class="list-disc ml-6 mb-2 space-y-2">
+                <li><strong>Público</strong>: aportes estatales para funcionamiento y campaña.</li>
+                <li><strong>Privado</strong>: donaciones permitidas, límites y prohibiciones.</li>
+                <li><strong>Mixto</strong>: combinación regulada por la Ley 26.215.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO C -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado C: El sistema electoral argentino (arts. 37 y 45)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">El sistema electoral argentino se apoya en principios constitucionales:</p>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li><strong>Sufragio universal, igual, secreto y obligatorio</strong> (art. 37).</li>
+                <li>Garantías de representación política auténtica.</li>
+                <li>Participación de partidos que aseguran pluralismo.</li>
+              </ul>
+
+              <p class="mb-4">El régimen de elección varía según el cargo:</p>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li><strong>Presidente y Vice</strong>: fórmula única, ballotage (art. 94–99).</li>
+                <li><strong>Diputados</strong>: sistema proporcional D’Hondt, distrito plurinominal (art. 45).</li>
+                <li><strong>Senadores</strong>: representación provincial (2 por mayoría, 1 por minoría).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO D -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado D: Sistemas proporcional y mayoritario
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">La organización electoral combina elementos de ambos modelos:</p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Sistema Proporcional:</h3>
+
+              <ul class="list-disc ml-6 mb-4 space-y-2">
+                <li>Asigna bancas según proporción de votos.</li>
+                <li>Favorece pluralismo y representación de minorías.</li>
+                <li>Es el sistema de elección de Diputados.</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Sistema Mayoritario:</h3>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Premia al ganador.</li>
+                <li>Genera gobiernos más estables.</li>
+                <li>Ejemplo: elección presidencial con ballotage.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO E -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado E: Autoridades electorales (Justicia Nacional Electoral)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">La administración y control del proceso electoral recae en:</p>
+
+              <ul class="list-disc ml-6 mb-4 space-y-2">
+                <li><strong>La Cámara Nacional Electoral</strong>: máximo tribunal del sistema.</li>
+                <li><strong>Juzgados Federales con competencia electoral</strong> en cada distrito.</li>
+                <li><strong>Dirección Nacional Electoral</strong>: apoyo técnico-administrativo.</li>
+              </ul>
+
+              <p>Su función es garantizar elecciones libres, transparentes y auténticas.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO F -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado F: Reformas electorales y participación ciudadana
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                La evolución del sistema electoral argentino ha incorporado reformas orientadas a fortalecer la legitimidad democrática.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Reformas destacadas:</h3>
+
+              <ul class="list-disc ml-6 mb-4 space-y-2">
+                <li>Voto femenino (Ley 13.010, 1947).</li>
+                <li>Voto joven (Ley 26.774, 2012).</li>
+                <li>PASO obligatorias (Ley 26.571).</li>
+                <li>Debates presidenciales obligatorios.</li>
+                <li>Transparencia y control del financiamiento partidario.</li>
+              </ul>
+
+              <p>Estas reformas amplían la participación ciudadana y fortalecen la calidad institucional.</p>
+            </div>
+          </div>
+        </div>
+        <div id="unidad11" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">
+            Unidad 11
+            <span class="block text-lg text-gray-500 font-medium"> La Reforma Constitucional y los Mecanismos de Cambio Institucional </span>
+          </h1>
+
+          <!-- APARTADO A -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado A: Poder constituyente y rigidez constitucional
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                El <strong>poder constituyente</strong> es la facultad originaria del pueblo para darse una Constitución. Es superior, ilimitado y
+                previo al orden jurídico.
+              </p>
+
+              <p class="mb-4">
+                Una vez sancionada, la Constitución crea un <strong>poder constituido</strong> para modificarla bajo reglas específicas: el mecanismo
+                del art. 30. Esto expresa el principio de <strong>rigidez constitucional</strong>: la Carta Magna no puede modificarse por leyes
+                ordinarias.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Clases de poder constituyente:</h3>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li><strong>Originario</strong>: funda el orden constitucional.</li>
+                <li><strong>Derivado o reformador</strong>: modifica la Constitución conforme al art. 30.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO B -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado B: Procedimiento del artículo 30 (reforma constitucional)
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">La Constitución argentina establece un mecanismo formal para su reforma:</p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">1. Declaración de necesidad de reforma</h3>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Debe ser realizada por el <strong>Congreso</strong>.</li>
+                <li>Requiere mayoría especial: <strong>2/3 de los miembros</strong> de cada Cámara.</li>
+                <li>Debe especificar los artículos o la materia a reformar.</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-2">2. Convocatoria a Convención Constituyente</h3>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Elegida por el pueblo.</li>
+                <li>Tiene competencia limitada por la ley declarativa.</li>
+                <li>Es un órgano extraordinario: funciona sólo para reformar.</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-2">3. Facultad exclusiva</h3>
+
+              <p>Sólo la Convención puede introducir modificaciones. El Congreso no reforma: <strong>declara la necesidad</strong>.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO C -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado C: Límites de la reforma — formales y materiales
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <h3 class="font-semibold text-purple-900 mb-3">Límites formales:</h3>
+
+              <ul class="list-disc ml-6 mb-4 space-y-2">
+                <li>Requieren seguir estrictamente el art. 30.</li>
+                <li>Competencia limitada de la Convención.</li>
+                <li>Tiempo y objeto determinados por la ley declarativa.</li>
+              </ul>
+
+              <h3 class="font-semibold text-purple-900 mb-3">Límites materiales:</h3>
+
+              <p class="mb-4">Aunque la Constitución no enumera cláusulas pétreas, la doctrina reconoce límites implícitos:</p>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Forma republicana (art. 1).</li>
+                <li>Derechos humanos con jerarquía constitucional (art. 75 inc. 22).</li>
+                <li>Principio federal.</li>
+                <li>Soberanía del pueblo.</li>
+                <li>División de poderes.</li>
+              </ul>
+
+              <p>La Corte Suprema puede invalidar reformas que vulneren estos principios.</p>
+            </div>
+          </div>
+
+          <!-- APARTADO D -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado D: La Convención Constituyente
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                Es el órgano encargado de realizar efectivamente la reforma constitucional. Su autoridad surge del mandato popular y su competencia
+                está limitada por la ley del Congreso.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Características:</h3>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>Órgano extraordinario, temporal y especializado.</li>
+                <li>Puede aceptar o rechazar la reforma propuesta.</li>
+                <li>No puede modificar artículos no habilitados por el Congreso.</li>
+                <li>Sus decisiones tienen fuerza constitucional plena.</li>
+              </ul>
+
+              <p class="mt-3">
+                Ejemplo histórico: La Convención de 1994 que introdujo la reelección presidencial, autonomía municipal, jefe de gabinete, consejo de
+                la magistratura, etc.
+              </p>
+            </div>
+          </div>
+
+          <!-- APARTADO E -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-4">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado E: Enmienda constitucional
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">
+                La enmienda es un mecanismo más simple que la reforma total, utilizado para introducir cambios puntuales o ajustes técnicos.
+              </p>
+
+              <p class="mb-4">
+                Puede ser aprobada directamente por el Congreso con mayoría especial y sometida a ratificación popular si la ley así lo dispone.
+              </p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Características de la enmienda:</h3>
+
+              <ul class="list-disc ml-6 space-y-2">
+                <li>No requiere Convención Constituyente.</li>
+                <li>No puede alterar principios fundamentales.</li>
+                <li>Debe respetar la forma republicana y los derechos humanos.</li>
+                <li>Se utiliza para ajustar artículos aislados.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- APARTADO F -->
+          <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <button class="accordion-btn w-full flex justify-between items-center text-left text-purple-800 font-semibold text-lg">
+              Apartado F: Alcances y efectos jurídicos de la reforma constitucional
+              <i class="fa-solid fa-chevron-down text-purple-700"></i>
+            </button>
+
+            <div class="accordion-content hidden mt-4 text-gray-700 leading-relaxed">
+              <p class="mb-4">Una reforma válida adquiere plena vigencia desde su aprobación por la Convención y publicación oficial.</p>
+
+              <h3 class="font-semibold text-purple-900 mb-2">Efectos principales:</h3>
+
+              <ul class="list-disc ml-6 space-y-2 mb-4">
+                <li>Modifica la jerarquía normativa.</li>
+                <li>Obliga a todos los poderes públicos.</li>
+                <li>Reconfigura instituciones: ejemplos 1994 (balotaje, autonomía municipal, jefe de gabinete).</li>
+                <li>Incorpora nuevos derechos y principios interpretativos.</li>
+              </ul>
+
+              <p>
+                La reforma fortalece la legitimidad del sistema político cuando surge de un proceso participativo, transparente y respetuoso del orden
+                constitucional.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- fin unidad 11 -->
+        <div id="recursos" class="unidad-content hidden">
+          <h1 class="text-4xl font-bold text-purple-900 mb-6">Biblioteca Visual y Recursos de Estudio</h1>
+
+          <!-- =============================== -->
+          <!-- MAPAS CONCEPTUALES              -->
+          <!-- =============================== -->
+
+          <h2 class="text-2xl font-semibold text-purple-800 mb-4">Mapas Conceptuales</h2>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- MAPA: DIVISIÓN DE PODERES -->
+            <div class="bg-white shadow-md rounded-lg p-6">
+              <h3 class="font-bold text-lg text-purple-700 mb-4">División de Poderes</h3>
+
+              <div class="relative p-6 border rounded-lg bg-purple-50">
+                <div class="text-center font-semibold text-purple-900">Constitución Nacional</div>
+
+                <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+                  <div class="bg-white rounded-lg shadow p-3">
+                    <strong>Poder Legislativo</strong>
+                    <p class="text-sm text-gray-600">Dicta leyes</p>
+                  </div>
+                  <div class="bg-white rounded-lg shadow p-3">
+                    <strong>Poder Ejecutivo</strong>
+                    <p class="text-sm text-gray-600">Administra</p>
+                  </div>
+                  <div class="bg-white rounded-lg shadow p-3">
+                    <strong>Poder Judicial</strong>
+                    <p class="text-sm text-gray-600">Controla</p>
+                  </div>
+                </div>
+
+                <p class="text-sm text-gray-500 text-center mt-4">Sistema republicano basado en frenos y contrapesos</p>
+              </div>
+            </div>
+
+            <!-- MAPA: CONTROL DE CONSTITUCIONALIDAD -->
+            <div class="bg-white shadow-md rounded-lg p-6">
+              <h3 class="font-bold text-lg text-purple-700 mb-4">Control de Constitucionalidad</h3>
+
+              <div class="p-6 border rounded-lg bg-purple-50 space-y-4">
+                <div class="bg-white p-3 rounded shadow text-center">
+                  <strong>Control Difuso</strong>
+                  <p class="text-sm text-gray-600">Todos los jueces pueden ejercerlo</p>
+                </div>
+
+                <div class="bg-white p-3 rounded shadow text-center">
+                  <strong>Control Concreto</strong>
+                  <p class="text-sm text-gray-600">Requiere caso judicial real</p>
+                </div>
+
+                <div class="bg-white p-3 rounded shadow text-center">
+                  <strong>Control Convencional</strong>
+                  <p class="text-sm text-gray-600">A la luz de tratados internacionales</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================== -->
+          <!-- LÍNEAS DE TIEMPO (MEJORADAS)    -->
+          <!-- =============================== -->
+
+          <h2 class="text-2xl font-semibold text-purple-800 mt-12 mb-4">Líneas de Tiempo</h2>
+
+          <div class="bg-white p-6 rounded-lg shadow overflow-hidden">
+            <!-- Contenedor scrolleable -->
+            <div class="max-h-96 overflow-y-auto pr-4 space-y-8 timeline">
+              <!-- ITEM -->
+              <div class="tl-item">
+                <h3>1810 – Revolución de Mayo</h3>
+                <p>Primer gobierno patrio y comienzo del proceso independentista.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1816 – Declaración de la Independencia</h3>
+                <p>Nacimiento formal de las Provincias Unidas en Sudamérica.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1819 – Primera Constitución</h3>
+                <p>Intento de organización unitaria con fuerte resistencia provincial.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1826 – Constitución Unitaria</h3>
+                <p>Proyecto centralista impulsado por Rivadavia. Rechazo provincial.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1831 – Pacto Federal</h3>
+                <p>Acuerdo entre provincias para coordinar relaciones y defensa común.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1852 – Acuerdo de San Nicolás</h3>
+                <p>Punto de partida para la Convención Constituyente de 1853.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1853 – Constitución Nacional</h3>
+                <p>Organiza el Estado federal y establece el sistema republicano.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1860 – Reforma Constitucional</h3>
+                <p>Se incorpora Buenos Aires y se ajustan artículos esenciales.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1866 – Reforma Financiera</h3>
+                <p>Modificaciones sobre contribuciones directas y presupuesto.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1898 – Reforma</h3>
+                <p>Ajustes al funcionamiento del Poder Ejecutivo.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1949 – Constitución Social</h3>
+                <p>Reconocimiento de derechos sociales, económicos y laborales.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1957 – Reforma</h3>
+                <p>Se incorpora el artículo 14 bis: derechos sociales y laborales.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1972 – Proyecto de Reforma</h3>
+                <p>Intento fallido de modernización constitucional.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1983 – Retorno a la Democracia</h3>
+                <p>Restauración del orden constitucional tras la dictadura.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>1994 – Reforma Moderna</h3>
+                <p>Autonomía municipal, Jefe de Gabinete y tratados de DDHH.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>2001 – Crisis Institucional</h3>
+                <p>Caída del gobierno y crisis de representación política.</p>
+              </div>
+
+              <div class="tl-item">
+                <h3>2015 – Nuevo Ciclo Político</h3>
+                <p>Discusión sobre reformas, federalismo y transparencia.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================== -->
+          <!-- TARJETAS RESUMEN               -->
+          <!-- =============================== -->
+
+          <h2 class="text-2xl font-semibold text-purple-800 mt-12 mb-4">Tarjetas Resumen por Unidad</h2>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 1</h3>
+              <p class="text-sm text-gray-700">Conceptos base de Constitución, derecho y organización del poder.</p>
+            </div>
+
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 2</h3>
+              <p class="text-sm text-gray-700">Historia constitucional, formación del Estado y evolución jurídica.</p>
+            </div>
+
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 3</h3>
+              <p class="text-sm text-gray-700">División de poderes, competencias y funcionamiento institucional.</p>
+            </div>
+
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 4</h3>
+              <p class="text-sm text-gray-700">Principios republicanos, federalismo y formas de gobierno.</p>
+            </div>
+
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 5</h3>
+              <p class="text-sm text-gray-700">Derechos humanos, garantías constitucionales y su protección.</p>
+            </div>
+
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 6</h3>
+              <p class="text-sm text-gray-700">Jurisdicción, competencia y organización del Poder Judicial.</p>
+            </div>
+
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 7</h3>
+              <p class="text-sm text-gray-700">Proceso constitucional, control de constitucionalidad y amparos.</p>
+            </div>
+
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 8</h3>
+              <p class="text-sm text-gray-700">Sistema electoral, representación política y partidos.</p>
+            </div>
+
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 9</h3>
+              <p class="text-sm text-gray-700">Administración pública, funciones del Poder Ejecutivo y actos administrativos.</p>
+            </div>
+
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 10</h3>
+              <p class="text-sm text-gray-700">Tratados internacionales, relaciones exteriores y jerarquía normativa.</p>
+            </div>
+
+            <div class="bg-purple-50 p-5 shadow rounded-lg">
+              <h3 class="font-bold text-purple-800">Unidad 11</h3>
+              <p class="text-sm text-gray-700">Reformas constitucionales, mecanismos y evolución institucional.</p>
+            </div>
+          </div>
+
+          <!-- =============================== -->
+          <!-- AUTOEVALUACIÓN                 -->
+          <!-- =============================== -->
+
+          <h2 class="text-2xl font-semibold text-purple-800 mt-12 mb-4">Autoevaluación</h2>
+
+          <div class="bg-white p-6 rounded-lg shadow space-y-6">
+            <div>
+              <h3 class="font-semibold text-purple-800 mb-2">Pregunta 1</h3>
+              <p class="text-gray-700 mb-2">¿Qué caracteriza al control difuso de constitucionalidad?</p>
+              <ul class="list-disc ml-6 text-gray-600">
+                <li>A) Lo ejerce únicamente la Corte Suprema</li>
+                <li>B) Lo ejerce cualquier juez</li>
+                <li>C) Se aplica sólo en materia penal</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="font-semibold text-purple-800 mb-2">Pregunta 2</h3>
+              <p class="text-gray-700 mb-2">¿Cuál reforma incorporó el art. 14 bis?</p>
+              <ul class="list-disc ml-6 text-gray-600">
+                <li>A) Reforma de 1994</li>
+                <li>B) Reforma de 1957</li>
+                <li>C) Reforma de 1860</li>
+              </ul>
+            </div>
+
+            <!-- MÁS PREGUNTAS SI QUERÉS... -->
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      // CAMBIO DE UNIDAD
+      document.querySelectorAll(".unidad-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Cambiar contenido
+          document.querySelectorAll(".unidad-content").forEach((c) => c.classList.add("hidden"));
+          document.getElementById(btn.dataset.target).classList.remove("hidden");
+
+          // Estilos activos
+          document.querySelectorAll(".unidad-btn").forEach((b) => b.classList.remove("unidad-btn-active"));
+          btn.classList.add("unidad-btn-active");
+
+          // 🔥 CERRAR SIDEBAR EN MÓVIL
+          if (window.innerWidth < 1024) {
+            // lg breakpoint en Tailwind
+            sidebar.classList.add("-translate-x-full");
+            overlay.classList.add("hidden");
+          }
+        });
+      });
+
+      // ACORDEONES
+      document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".accordion-btn");
+        if (!btn) return;
+
+        const content = btn.nextElementSibling;
+        content.classList.toggle("hidden");
+        btn.classList.toggle("open");
+      });
+
+      // MENÚ HAMBURGUESA
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("overlay");
+      const menuToggle = document.getElementById("menuToggle");
+
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("-translate-x-full");
+        overlay.classList.toggle("hidden");
+      });
+
+      overlay.addEventListener("click", () => {
+        sidebar.classList.add("-translate-x-full");
+        overlay.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
