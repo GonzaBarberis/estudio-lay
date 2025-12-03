@@ -1851,6 +1851,136 @@
         <div id="recursos" class="unidad-content hidden">
           <h1 class="text-4xl font-bold text-purple-900 mb-6">Biblioteca Visual y Recursos de Estudio</h1>
 
+          <!-- ==================================================== -->
+          <!-- 🔎 GLOSARIO INTELIGENTE – BUSCAR EN EL PDF ORIGINAL   -->
+          <!-- ==================================================== -->
+
+          <h2 class="text-2xl font-semibold text-purple-800 mb-4">Glosario Inteligente (Búsqueda en PDF)</h2>
+
+          <p class="text-gray-600 mb-4">
+            Escribí una palabra o concepto y el sistema buscará en el PDF completo del curso, mostrando los párrafos donde aparece y la página
+            correspondiente.
+          </p>
+
+          <div class="bg-white p-6 rounded-lg shadow mb-6">
+            <!-- BUSCADOR -->
+            <div class="flex gap-3 mb-4">
+              <input
+                id="buscadorPDF"
+                placeholder="Buscar en el PDF (ej: 'constitución', 'derechos', 'federalismo'...)"
+                class="flex-1 border border-gray-300 px-4 py-2 rounded-lg focus:ring focus:ring-purple-200"
+              />
+
+              <button onclick="buscarEnPDF()" class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-lg shadow transition">
+                Buscar
+              </button>
+            </div>
+
+            <!-- RESULTADOS -->
+            <div id="resultadosPDF" class="space-y-4 max-h-[450px] overflow-y-auto pr-3"></div>
+
+            <div id="visorPDF" class="mt-6 hidden">
+  <h3 class="text-lg font-semibold text-purple-700 mb-3">
+    Página seleccionada
+  </h3>
+  <canvas id="pdfCanvas" class="border rounded shadow"></canvas>
+</div>
+          </div>
+
+          <!-- PDF.js -->
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+          <script>
+            pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js";
+          </script>
+
+          <script>
+            const pdfURL = "constitucional.pdf"; // 📌 Tu PDF en la raíz del proyecto
+
+            async function buscarEnPDF() {
+              const termino = document.getElementById("buscadorPDF").value.trim().toLowerCase();
+              const resultsContainer = document.getElementById("resultadosPDF");
+
+              if (!termino) {
+                resultsContainer.innerHTML = `<p class="text-red-600">Ingresá una palabra para buscar.</p>`;
+                return;
+              }
+
+              resultsContainer.innerHTML = `<p class="text-gray-600">Buscando en el PDF, aguarde...</p>`;
+
+              const pdf = await pdfjsLib.getDocument(pdfURL).promise;
+
+              let resultados = [];
+
+              for (let i = 1; i <= pdf.numPages; i++) {
+                const page = await pdf.getPage(i);
+                const content = await page.getTextContent();
+
+                const textoPlano = content.items.map((t) => t.str).join(" ");
+
+                const index = textoPlano.toLowerCase().indexOf(termino);
+                if (index !== -1) {
+                  const inicio = Math.max(0, index - 80);
+                  const fin = Math.min(textoPlano.length, index + termino.length + 80);
+                  const fragmento = textoPlano.substring(inicio, fin);
+
+                  resultados.push({
+                    page: i,
+                    text: fragmento.replace(new RegExp(termino, "gi"), (m) => `<mark>${m}</mark>`),
+                  });
+                }
+              }
+
+              mostrarResultados(resultados, termino);
+            }
+
+          function mostrarResultados(resultados, termino) {
+  const cont = document.getElementById("resultadosPDF");
+
+  if (resultados.length === 0) {
+    cont.innerHTML = `<p class="text-red-600">No se encontró "<strong>${termino}</strong>" en el PDF.</p>`;
+    return;
+  }
+
+  cont.innerHTML = resultados
+    .map(
+      (r, index) => `
+      <div class="bg-gray-50 border border-purple-200 rounded-lg p-4 shadow-sm cursor-pointer hover:bg-purple-100 transition"
+           onclick="abrirPaginaPDF(${r.page})">
+        <p class="text-xs text-gray-500 mb-1">Página ${r.page}</p>
+        <p class="text-gray-800 leading-relaxed">${r.text}...</p>
+      </div>
+    `
+    )
+    .join("");
+}
+
+async function abrirPaginaPDF(numPagina) {
+  const visor = document.getElementById("visorPDF");
+  const canvas = document.getElementById("pdfCanvas");
+  const ctx = canvas.getContext("2d");
+
+  visor.classList.remove("hidden");
+
+  const pdf = await pdfjsLib.getDocument(pdfURL).promise;
+  const page = await pdf.getPage(numPagina);
+
+  const viewport = page.getViewport({ scale: 1.5 });
+
+  canvas.height = viewport.height;
+  canvas.width = viewport.width;
+
+  const renderContext = {
+    canvasContext: ctx,
+    viewport: viewport
+  };
+
+  await page.render(renderContext).promise;
+}
+
+
+          </script>
+
           <!-- =============================== -->
           <!-- MAPAS CONCEPTUALES              -->
           <!-- =============================== -->
